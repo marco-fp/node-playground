@@ -3,7 +3,7 @@ const classifyDuplicates = require('./classifyDuplicates');
 
 const {
   generateList,
-  findDuplicates
+  findDuplicates,
 } = classifyDuplicates;
 
 let size = 1000000;
@@ -15,5 +15,5 @@ if (process.argv.length > 2) {
 const list = generateList(size);
 const duplicates = findDuplicates(list);
 
-console.log("List is: ", list);
-console.log("Duplicates are: ", duplicates);
+console.log('List is: ', list);
+console.log('Duplicates are: ', duplicates);

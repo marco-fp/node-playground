@@ -1,5 +1,5 @@
-const generateList = require("./generateList");
-const findDuplicates = require("./findDuplicates");
+const generateList = require('./generateList');
+const findDuplicates = require('./findDuplicates');
 
 module.exports = {
   generateList,
