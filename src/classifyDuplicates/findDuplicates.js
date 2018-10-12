@@ -10,8 +10,6 @@ const findDuplicates = (values) => {
     } else if (uniqueValues[value] === 1) {
       uniqueValues[value] = 2;
       duplicateValues.push(value);
-    } else {
-      uniqueValues[value] = 2;
     }
   }
 
