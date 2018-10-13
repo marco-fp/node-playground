@@ -1,7 +1,7 @@
 const generateList = require('./generateList');
-const findDuplicates = require('./findDuplicates');
+const printDuplicates = require('./printDuplicates');
 
 module.exports = {
   generateList,
-  findDuplicates,
+  printDuplicates,
 };

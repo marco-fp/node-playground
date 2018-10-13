@@ -1,7 +1,9 @@
-// TODO: If values.length > 50M -> Use a bloom filter instead of a "hashmap"
-const findDuplicates = (values) => {
+const printDuplicates = (values, log) => {
+  if (!values || !values.length || !log) {
+    throw new Error('printDuplicates - Wrong arguments');
+  }
+
   const uniqueValues = {};
-  const duplicateValues = [];
 
   for (let i = 0; i < values.length; i += 1) {
     const value = values[i];
@@ -9,11 +11,9 @@ const findDuplicates = (values) => {
       uniqueValues[value] = 1;
     } else if (uniqueValues[value] === 1) {
       uniqueValues[value] = 2;
-      duplicateValues.push(value);
+      log(value);
     }
   }
-
-  return duplicateValues;
 };
 
-module.exports = findDuplicates;
+module.exports = printDuplicates;
