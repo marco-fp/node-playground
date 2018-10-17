@@ -15,4 +15,11 @@ describe('generateList', () => {
       expect(value).toBeGreaterThanOrEqual(1);
     });
   });
+
+  it('should throw an error if the arguments are incorrect', () => {
+    const withNoSize = () => generateList();
+    const withNegativeSize = () => generateList(-42);
+    expect(withNoSize).toThrow();
+    expect(withNegativeSize).toThrow();
+  });
 });
