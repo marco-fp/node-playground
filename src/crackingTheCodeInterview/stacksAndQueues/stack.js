@@ -7,14 +7,15 @@ class StackNode {
 
 class Stack {
     constructor() {
+        this.top = null;
     }
 
     pop() {
-        if (this.top === null) {
+        if (!this.top) {
             throw new Error('Empty stack');
         }
 
-        item = this.top.data;
+        const item = this.top.data;
         this.top = this.top.next;
 
         return item;
@@ -28,7 +29,7 @@ class Stack {
     }
 
     peek() {
-        if (this.top === null) {
+        if (!this.top) {
             throw new Error('Empty stack');
         }
 
@@ -38,6 +39,27 @@ class Stack {
     isEmpty() {
         return this.top === null;
     }
+
+    toArray() {
+        let node = this.top;
+        const values = [];
+        while (node) {
+            values.push(node.data);
+            node = node.next;
+        }
+
+        return values;
+    }
+}
+
+const test = () => {
+    const s = new Stack();
+
+    s.push(10);
+    s.push(5);
+
+    console.log(s.pop());
+    console.log(s.peek());
 }
 
 module.exports = {

@@ -20,7 +20,7 @@ class Queue {
         this.last = item;
 
         if (this.first === null) {
-            first = item;
+            this.first = item;
         }
     }
 
@@ -33,7 +33,7 @@ class Queue {
         this.first = this.first.next;
 
         if (this.first === null) {
-            last = null;
+            this.last = null;
         }
 
         return value;
