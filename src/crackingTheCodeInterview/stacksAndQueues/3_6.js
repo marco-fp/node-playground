@@ -48,11 +48,11 @@ const test = () => {
     const dog = { kind: 'DOG' };
     const cat = { kind: 'CAT' };
 
-    shelter.enqueue(dog);
-    shelter.enqueue(dog);
-    shelter.enqueue(cat);
-    shelter.enqueue(dog);
-    shelter.enqueue(cat);
+    shelter.enqueue(dog); // 0
+    shelter.enqueue(dog); // 1
+    shelter.enqueue(cat); // 2
+    shelter.enqueue(dog); // 3
+    shelter.enqueue(cat); // 4
 
     console.log(shelter.dequeueCat());
     console.log(shelter.dequeueAny());
