@@ -29,4 +29,4 @@ const test = () => {
     console.log(flipToWin(1775))
 }
 
-test();
+test(); 
