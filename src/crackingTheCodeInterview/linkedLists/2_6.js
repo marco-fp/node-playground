@@ -15,10 +15,6 @@ function compare(node, head) {
         return null;
     }
 
-    if (topNode) {
-
-    }
-
     return topNode.data === node.data ? (topNode.next || true) : null;
 }
 
@@ -52,7 +48,7 @@ function arrayToLinkedList(values) {
     return dummyHead.next;
 }
 
-const values = [1, 2, 3, 2, 1, 1];
+const values = [1, 2, 3, 1, 1];
 
 const list = arrayToLinkedList(values);
 
